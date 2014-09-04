@@ -1,3 +1,6 @@
+//Assignment 1: Media Arts & Practice 404 Tactical Media
+//McKenzie Carlile
+
 int color1;
 int color2;
 int color3;
@@ -10,7 +13,8 @@ int i3 = 2;
 int i4 = 3;
 int i5 = 4;
 int i6 = 5;
-
+int savedTime;
+int totalTime = 50;
 
 
 color [] colarray = { 
@@ -22,9 +26,45 @@ color [] colarray = {
 void setup () {
   size (800, 500, P2D);
   background(0);
+  savedTime = millis();
 }
 
 void draw () {
+  int passedTime = millis() - savedTime;
+  if (passedTime > totalTime) {
+    if (i1 >= 5) {
+      i1=0;
+    } else {
+      i1++;
+    }
+    if (i2 >= 5) {
+      i2=0;
+    } else {
+      i2++;
+    }
+    if (i3 >= 5) {
+      i3=0;
+    } else {
+      i3++;
+    }
+    if (i4 >= 5) {
+      i4=0;
+    } else {
+      i4++;
+    }
+    if (i5 >= 5) {
+      i5=0;
+    } else {
+      i5++;
+    }
+    if (i6 >= 5) {
+      i6=0;
+    } else {
+      i6++;
+    }
+    savedTime = millis();
+  }
+
   //begin feathers
   noStroke();
   color1 = color(colarray[i1]);
@@ -56,36 +96,5 @@ void draw () {
   triangle(400.361, 159.736, 429.5, 162, 405, 190.5);
 }
 
-void mousePressed () {
-  if (i1 >= 5) {
-    i1=0;
-  } else {
-    i1++;
-  }
-  if (i2 >= 5) {
-    i2=0;
-  } else {
-    i2++;
-  }
-  if (i3 >= 5) {
-    i3=0;
-  } else {
-    i3++;
-  }
-  if (i4 >= 5) {
-    i4=0;
-  } else {
-    i4++;
-  }
-  if (i5 >= 5) {
-    i5=0;
-  } else {
-    i5++;
-  }
-  if (i6 >= 5) {
-    i6=0;
-  } else {
-    i6++;
-  }
-}
+//Source 1986 NBC Logo found here: http://vector-magz.com/search/nbc-logo-peacock-video-download/
 
